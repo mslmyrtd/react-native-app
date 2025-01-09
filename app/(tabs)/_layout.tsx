@@ -53,7 +53,7 @@ export default function TabLayout() {
             <TabIcon
               icon={icons.home}
               color={color}
-              name="Home"
+              name="index"
               focused={focused}
             />
           ),

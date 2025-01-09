@@ -6,9 +6,10 @@ import { icons } from "../constants";
 interface FormFieldProps {
   title: string;
   value: string;
-  placeholder: string;
+  placeholder?: string;
   handleChangeText: (text: string) => void;
-  otherStyles: string;
+  otherStyles?: string;
+  keyboardType?: "default" | "email-address" | "numeric" | "phone-pad";
 }
 const FormField: React.FC<FormFieldProps> = ({
   title,
@@ -23,8 +24,7 @@ const FormField: React.FC<FormFieldProps> = ({
   return (
     <View className={`space-y-2 ${otherStyles}`}>
       <Text className="text-base text-gray-100 font-pmedium">{title}</Text>
-
-      <View  className={`w-full h-16 px-4 bg-slate-800 rounded-2xl border-2 ${
+      <View  className={`w-full h-16 px-4 bg-slate-800 rounded-2xl border-2 mt-2 ${
           isFocused ? "border-secondary" : "border-slate-900"
         } flex flex-row items-center`}>
         <TextInput
@@ -42,7 +42,7 @@ const FormField: React.FC<FormFieldProps> = ({
         {title === "Password" && (
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Image
-              source={showPassword ? icons.eye : icons.eyeHide}
+              source={showPassword ? require('@/assets/icons/eye.png') : icons.eyeHide}
               className="w-6 h-6"
               resizeMode="contain"
             />
