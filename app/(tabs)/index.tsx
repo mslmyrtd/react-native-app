@@ -8,6 +8,7 @@ import { getAllPosts, getLatestPosts } from "../../lib/appwrite";
 import EmptyState from "../../components/EmptyState";
 import SearchInput from "../../components/SearchInput";
 import Trending from "../../components/Trending";
+import VideoCard from "../../components/VideoCard";
 
 const Home = () => {
   const { data: posts, refetch } = useAppwrite(getAllPosts);
@@ -31,13 +32,19 @@ const Home = () => {
     <SafeAreaView className="bg-primary">
       <FlatList
         data={posts}
+        // @ts-ignore
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => (
           <VideoCard
+            // @ts-ignore
             title={item.title}
+            // @ts-ignore
             thumbnail={item.thumbnail}
+            // @ts-ignore
             video={item.video}
+            // @ts-ignore
             creator={item.creator.username}
+            // @ts-ignore
             avatar={item.creator.avatar}
           />
         )}

@@ -29,7 +29,7 @@ const SignUp = () => {
       //setUser(result);
       //setIsLogged(true);
 
-      router.replace("/(tabs)/bookmark" as any);
+      router.replace("/(tabs)/home" as any);
     } catch (error: any) {
       Alert.alert("Error", error.message);
     } finally {
@@ -47,7 +47,7 @@ const SignUp = () => {
           }}
         >
           <Image
-            source={require("@/assets/images/logo.png")}
+            source={images.logo}
             resizeMode="contain"
             className="w-[115px] h-[34px]"
           />

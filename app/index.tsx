@@ -19,13 +19,12 @@ console.log(loading, isLogged)
       >
         <View className="w-full  justify-center items-center min-h-[85vh] px-4">
           <Image
-            source={require("@/assets/images/logo.png")}
+            source={images.logo}
             className="w-[130px] h-[84px]"
             resizeMode="contain"
           />
           <Image
-            source={require("@/assets/images/cards.png")}
-
+            source={images.cards}
             className="max-w-[380px] w-full h-[298px]"
             resizeMode="contain"
           />
@@ -36,7 +35,7 @@ console.log(loading, isLogged)
               <Text className="text-secondary-200">Aora</Text>
             </Text>
             <Image
-              source={require("@/assets/images/logo.path.png")}
+              source={images.path}
               className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
               resizeMode="contain"
             />

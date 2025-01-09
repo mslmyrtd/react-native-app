@@ -12,7 +12,7 @@ interface TabIconProps {
 
 const TabIcon: React.FC<TabIconProps> = ({ icon, color, name, focused }) => {
   return (
-    <View className="flex items-center justify-center gap-2">
+    <View className="flex mt-6 items-center justify-center gap-2">
     <Image
       source={icon}
       resizeMode="contain"
@@ -41,7 +41,7 @@ export default function TabLayout() {
           backgroundColor: "#161622",
           borderTopWidth: 1,
           borderTopColor: "#232533",
-          height: 84,
+          height: 85,
         },
       }}
     >
@@ -53,7 +53,7 @@ export default function TabLayout() {
             <TabIcon
               icon={icons.home}
               color={color}
-              name="index"
+              name="Home"
               focused={focused}
             />
           ),

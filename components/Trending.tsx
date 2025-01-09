@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import { icons } from "../constants";
+
 const zoomIn = {
   0: {
     scale: 0.9,
@@ -65,7 +67,7 @@ const TrendingItem = ({ activeItem, item }) => {
           />
 
           <Image
-            source={require("@/assets/icons/play.png")}
+            source={icons.play}
             className="w-12 h-12 absolute"
             resizeMode="contain"
           />
@@ -77,8 +79,8 @@ const TrendingItem = ({ activeItem, item }) => {
 
 const Trending = ({ posts }: any) => {
   const [activeItem, setActiveItem] = useState(posts[0]);
-
-  const viewableItemsChanged = ({ viewableItems }: any) => {
+  //@ts-ignore
+  const viewableItemsChanged = ({ viewableItems }) => {
     if (viewableItems.length > 0) {
       setActiveItem(viewableItems[0].key);
     }

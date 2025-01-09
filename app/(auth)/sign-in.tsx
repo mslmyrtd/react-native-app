@@ -3,6 +3,7 @@ import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 
+import { images } from "../../constants";
 import CustomBotton from "@/components/CustomBotton";
 import FormField from "@/components/FormField";
 import { signIn,getCurrentUser } from "../../lib/appwrite";
@@ -48,7 +49,7 @@ const SignIn = () => {
           }}
         >
           <Image
-            source={require("@/assets/images/logo.png")}
+            source={images.logo}
             resizeMode="contain"
             className="w-[115px] h-[34px]"
           />
